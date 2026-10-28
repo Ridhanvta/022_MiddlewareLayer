@@ -197,3 +197,11 @@ app.delete(
         )
     }
 )
+
+app.use((req, res) => {
+    return errorResponse(
+        res, 
+        "Endpoint tidak ditemukan", 
+        404
+    )
+})
